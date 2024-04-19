@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hide</title>
+  </head>
+  <body style="text-align: center">
+    <button id="hide">Hide</button>
+    <button id="show">show</button>
+    <button id="toggleButton">togglebutton</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, modi
+      mollitia pariatur nisi ipsum quo doloremque magnam obcaecati, atque
+      similique eius fugiat placeat, optio aspernatur itaque!
+    </p>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    let btn = $("#hide");
+    btn.click(function () {
+      $("p").hide(2000);
+    });
+
+    let btnShow = $("#show");
+    btnShow.on("click", () => {
+      $("P").show(2000);
+    });
+
+    let toggleButton = $("#toggleButton");
+    toggleButton.click(function () {
+      $("p").toggle(2000);
+    });
+
+    $("#slideUp").click(function () {
+      $("p").slideUp();
+    });
+
+    $("#slideDown").click(function () {
+      $("p").slideDown();
+    });
+
+    $("#slideToggle").click(function () {
+      $("p").slideToggle();
+    });
+  </script>
+</html>
